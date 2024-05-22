@@ -1,0 +1,8 @@
+<div class="app-container">
+  <div class="sidebar-container" >
+    <app-sidebar class="app-sidebar" *ngIf="shouldDisplaySidebar()"></app-sidebar> 
+  </div>
+  <div class="page-container" [style]="!shouldDisplaySidebar() ? 'margin-bottom: 80px !important' : null">
+    <router-outlet></router-outlet>
+  </div>
+</div>
